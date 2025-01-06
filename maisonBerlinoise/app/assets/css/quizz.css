@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Pp Neue Montreal;
+}
+
+
+.quizz{
+    background-color:  black;
+    text-align: center;  
+    padding-top: 15vh;
+    padding-bottom:5vh ;
+    h1{
+    font-size: large;
+    padding-bottom: 3vh;
+    font-size: xx-large;
+    color: white;
+    letter-spacing: 0.4cap;
+    }
+    input{
+        padding: 2vh;
+        border: pink solid radius 2px;
+        background-color: pink;
+        color: black ;
+        font-family: Pp Neue Montreal;
+        font-weight: bold;
+    }
+    .submit{
+        padding-top: 2vh;
+    }
+    .submitQuiz{
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        background-color: white;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom:2vh ;
+        border-radius: 20%;
+    }
+    footer{
+        color: white;
+    }
+}
+
+ input:hover{
+    transform: scale(1.2);  
+}
+
+.question{
+    letter-spacing: 0.2 cap;
+    padding-top: 1vh;
+    padding-bottom:1vh;
+    p{
+    color:black;
+    font-family: Pp Neue Montreal;
+    letter-spacing: 0.1cap;
+    font-weight: bold;
+    }
+    
+}
+
+/* -----------------------------------submit_quizz----------------------------------  */
+
+
+.submit_quizz{
+    padding-top: 47vh;
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    .squelette{
+        height: 30vh;
+        width: auto;
+        position: absolute;
+        top: 10vh;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+    strong{
+        color: pink;
+    }
+    em{
+        color: pink;
+        font-style: normal ;
+    }
+    a{
+        font-weight: bold;
+        text-decoration: none;
+        color: pink ;
+    }
+    a:hover{
+        font-size: large;
+    }
+}

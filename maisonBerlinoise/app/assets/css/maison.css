@@ -1,0 +1,372 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+footer
+{
+    border-top: 1px solid whitesmoke;
+    margin-top: 30px;
+    padding-top: 5px;
+    p{
+        font-family: Pp Neue Montreal;
+        text-align: center;
+        em{
+            color: pink;
+            text-shadow: #fff 2px;
+            font-style: normal;
+        }
+    }
+}
+
+/* -----------------------------------Barre de navigation----------------------------------  */
+
+nav{  
+    background: rgba(0, 0, 0, 0.611);
+    padding: 1em;
+    width: 100%;
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2; 
+    font-family: Pp Neue Montreal;
+    .logo a{
+        font-size: 2rem;
+        font-weight: 100;
+        letter-spacing: 0.2 cap;
+        color: pink;
+    }
+    a{
+        text-decoration: none; 
+        color:pink;
+        padding-left: 2vh;
+        margin-right: 3vh;
+        font-size: 1rem;
+    .links{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        }  
+    } 
+    .links:hover{
+        font-size: x-large;
+    } 
+}
+
+/* _____________________________________Pop-up __________________________________ */
+
+#popup-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 98;
+    display: none;
+    justify-content: center;
+}    
+    
+
+.popup-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-family: Pp Neue Montreal;
+    max-width: 40vw;
+    max-height: 100vh;
+    width: 100%;
+    padding:30px;
+    box-sizing: border-box;
+    background:rgba(0, 0, 0, 0.759);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: solid 2px white ;
+    color: white;
+}
+
+#popup-overlay.open{
+    display: block !important;
+}
+
+.popup-content p{
+    padding: 1vh;
+    align-items: center;
+}
+
+.popup-link{
+text-decoration: none;
+color: #fff;
+background:black; 
+padding: 10px 20px;
+border-radius: 5px;
+display: inline-block;
+}
+
+.popup-content a{
+    padding-top: 2vh;
+    text-decoration: none;
+    background-color:black;
+    font-weight: bold;
+}
+.popup-content a:hover{}
+.popup-exit{
+    position: absolute;
+    top: 0.2vh;
+    right: 1vh;
+    text-decoration: none;
+    background:black;
+    color: whitesmoke;
+    border-radius: 5%;
+}
+/* _____________________________________Page principale___________________________________ */
+
+.pagePrincipal{
+    padding-top: 4em;
+    font-family: Pp Neue Montreal;
+    background: url(https://i.gifer.com/S9Ig.gif) no-repeat center center fixed; /* Applique le GIF */
+    background-size: cover; /* Adapte l'image à toute la page */
+    color: white; /* Texte blanc pour la lisibilité */
+    display: flex;
+    flex-direction: column; /* Organise le contenu en colonne */
+    justify-content: space-between;
+    min-height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    text-align: center; /* Centre le texte */
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    a:hover{
+        scale: (1.1);
+        color: red;
+    }
+}
+
+/* _____________________________________Page 1___________________________________ */
+
+/* Style de la page */
+.page1 {
+    display: flex;
+    flex-direction: column;
+    background: black;
+    justify-content: space-between;
+    font-family: Pp Neue Montreal;
+    color: #fff;
+    em{
+        color: pink;
+        font-style: normal;
+    }
+    .texteVideo{
+        margin-top:60vh ;
+        padding: 2vh;
+        background: rgba(0, 0, 0, 0.611);
+        padding-left: 5vh;
+        font-family: Pp Neue Montreal;
+        animation-duration: 4s;
+        animation-name: slidein;
+        h1{
+            color:pink;
+        }
+    }
+    .images{
+        padding-top: 3vh;
+        padding-left: 7vh;
+        padding-right: 7vh;
+    }
+    img{
+        padding-bottom: 1vh;
+        height: 40vh;
+        width: auto;
+        align-content: space-between;
+    }
+    video {
+        position: absolute; /* La vidéo couvre toute la page */
+        width: 100%;
+        height: 80vh; /* La vidéo prend toute la hauteur de l'écran */
+        object-fit: cover; /* Adapte la vidéo sans déformation */
+        z-index: -1; /* Place la vidéo derrière le texte */
+    }
+    .horaire{
+        margin-top: 10vh;
+        color: white;
+        text-align: center;
+        font-family: Pp Neue Montreal;
+        color: pink;
+        font-weight: 400;
+    }
+    .localisation{
+        text-align: center;
+        color: pink;
+        h3{
+            padding: 2vh;
+        }
+        p{
+            margin-bottom:2vh;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        /* Navigation */
+        nav {
+            flex-direction: column;
+            padding: 0.5em;
+            text-align: center;
+        }
+        .links a {
+            font-size: 1.2rem;
+            padding: 0.5em;
+        }
+    
+        /* Pop-up */
+        .popup-content {
+            max-width: 90%;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+    
+        iframe {
+            width: 40%;
+            height: auto;
+        }
+    
+        /* Vidéo */
+        video {
+            height: 50vh;
+        }
+    
+        .texteVideo {
+            margin-top: 30vh;
+        }
+    
+        /* Images */
+        .images img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1em;
+        }
+    
+        .images {
+            padding: 0 1em;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+        }
+    
+        /* Horaire */
+        .horaire {
+            font-size: 1rem;
+            padding-bottom: 2vh;
+        }
+    
+        /* Localisation */
+        .localisation iframe {
+            width: 100%;
+            height: 30vh;
+        }
+    
+        .localisation h3 {
+            font-size: 1.5rem;
+        }
+    
+        /* Carte */
+        .carte img {
+            height: 20vh;
+            position: static;
+            transform: none;
+            margin: 0 auto;
+        }
+    
+        .containerCarte {
+            margin: 0 2em;
+            padding: 2em;
+            font-size: 0.9rem;
+        }
+    
+        section {
+            flex-direction: column;
+            padding: 1em 0;
+        }
+    
+        ul {
+            padding: 0;
+            list-style-position: inside;
+        }
+    
+        h3 {
+            text-align: center;
+        }
+    }    
+}
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+    75% {
+      font-size: 100%;
+      margin-left: 25%;
+      width: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+/*--------------------------------------- Carte ---------------------------------------------------------*/
+.carte{
+    background: black;
+    font-family: Pp Neue Montreal;
+    color:#fff;
+    img{
+        height: 35vh;
+        width: auto;
+        position: fixed;
+        top: 4vh;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+    .containerCarte{
+        border-radius: 3%;
+        text-align: center;
+        margin-top: 33vh;
+        margin-left: 25vh;
+        margin-right: 25vh;
+        padding-top: 5vh;
+        background-color: pink;
+    }
+    a{
+        padding-top: 1vh;
+        text-decoration: none;
+        color:black;
+    }
+    a:hover{
+        font-size: larger;
+    }
+    h3{
+        padding-left: 7vh;
+        padding-top: 3vh;
+        color:black;
+        font-weight: bold;
+        text-align: left;
+    }
+    section{
+        display: flex;
+        text-align: left;
+        padding-top: 2vh;
+        padding-left: 40vh;
+        padding-bottom: 5vh;
+    ul{
+        list-style: none;
+        padding-left: 6vh;
+        color:black;
+        }
+    }
+}
